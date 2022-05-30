@@ -4,9 +4,16 @@
 \alias{db_targ}
 \title{Create a new db_targ object}
 \usage{
-db_targ(schema, table_name, query = "select * from {`schema`}.{`table_name`}")
+db_targ(
+  con,
+  schema,
+  table_name,
+  query = "select * from {`schema`}.{`table_name`}"
+)
 }
 \arguments{
+\item{con}{A database connection}
+
 \item{schema}{Name of schema containing the table}
 
 \item{table_name}{Name of the table}
