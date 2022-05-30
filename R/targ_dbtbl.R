@@ -27,4 +27,8 @@ validate_targets_dbtable <- function(db_targ){
     stop("schema, table_name, and query must all be character strings")
   }
   
+  if (!all(c('schema', 'table_name', 'query') %in% names(db_targ))){
+    stop("db_targ missing required fields")
+  }
+  
 }
