@@ -6,7 +6,7 @@
 #' @param ... Arbitrary arguments to pass to `DBI::dbWriteTable`
 #'
 #' @export
-#'
+#' @importFrom DBI Id dbWriteTable
 write_db_targ <- function(con, df, targ, ...){
   validate_targets_dbtable(targ)
   
